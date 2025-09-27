@@ -70,4 +70,22 @@ def report(request):
         "labels": labels,
         "data": data,
        
+<<<<<<< HEAD
     })
+=======
+    })
+
+from django.http import HttpResponse
+
+def home(request):
+    return HttpResponse("""
+        <h2>Welcome to the Demo Project 🚀</h2>
+        <p>Available endpoints:</p>
+        <ul>
+            <li><a href="/admin/">/admin/</a> → Django Admin</li>
+            <li><a href="/api/items/">/api/items/</a> → CRUD API for Items</li>
+            <li><a href="/api/fetch-btc/">/api/fetch-btc/</a> → Bitcoin Price API</li>
+            <li><a href="/api/report/">/api/report/</a> → Items Report (Chart)</li>
+        </ul>
+    """)
+>>>>>>> b78ad04 (Initial commit with Django project)
