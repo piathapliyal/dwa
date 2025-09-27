@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Items Report</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <h2>Items created in last 7 days</h2>
+
+
+  <canvas id="chart"></canvas>
+
+  <script>
+   
+    const labels = {{ labels|safe }};
+    const data = {{ data|safe }};
+
+ 
+    new Chart(document.getElementById('chart'), {
+      type: 'bar',
+      data: {
+        labels: labels,
+        datasets: [{
+          label: 'Items per day',
+          data: data,
+          backgroundColor: 'skyblue'
+        }]
+      }
+    });
+  </script>
+</body>
+</html>
